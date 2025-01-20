@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オセロAI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>オセロAI</h1>
+        <div class="game-controls">
+            <div class="player-select">
+                <p>あなたの手番:</p>
+                <button id="selectBlack">先手（黒）</button>
+                <button id="selectWhite">後手（白）</button>
+            </div>
+        </div>
+        <div class="board">
+            <div class="board-labels horizontal">
+                <span>A</span><span>B</span><span>C</span><span>D</span>
+                <span>E</span><span>F</span><span>G</span><span>H</span>
+            </div>
+            <div class="board-labels vertical">
+                <span>1</span><span>2</span><span>3</span><span>4</span>
+                <span>5</span><span>6</span><span>7</span><span>8</span>
+            </div>
+            <div id="gameBoard"></div>
+        </div>
+        <div class="game-info">
+            <p id="status">手番を選択してください</p>
+            <p id="score">黒: 2 - 白: 2</p>
+        </div>
+        <div id="console-output" class="console-container">
+            <h3>デバッグログ</h3>
+            <div id="console-log"></div>
+        </div>
+        <div id="gameEndDialog" class="dialog hidden">
+            <div class="dialog-content">
+                <h2>ゲーム終了</h2>
+                <p id="finalScore"></p>
+                <p>もう一度プレイしますか？</p>
+                <div class="dialog-buttons">
+                    <button id="playAgainBlack">先手（黒）で再プレイ</button>
+                    <button id="playAgainWhite">後手（白）で再プレイ</button>
+                    <button id="endGame">終了</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
